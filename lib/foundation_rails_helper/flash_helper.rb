@@ -23,7 +23,7 @@ module FoundationRailsHelper
         message += content_tag :div, :data => { :alert => "" }, :class => "alert-box #{key_matching[key.to_sym]}" do
           (value + link_to("&times;".html_safe, "#", :class => :close)).html_safe
         end
-      end.html_safe
+      end.to_s.html_safe
     end
   end
 end
